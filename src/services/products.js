@@ -13,7 +13,12 @@ const getByCategory = (category) => {
     return request.then(response => response.data)
 }
 
+const getProduct = (id, product) => {
+    const request = axios.get(`${baseUrl}/${id}/${product}`)
+    return request.then(response => response.data)
+}
 
-const exportedObject = { getAll, getByCategory}
+
+const exportedObject = { getAll, getByCategory, getProduct}
 
 export default exportedObject
